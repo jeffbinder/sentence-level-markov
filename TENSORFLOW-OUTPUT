@@ -1,0 +1,62 @@
+This is the output of train.py when generating the neural network I used:
+
+$ python train.py wright-nomoby.corpus wright256-25-500000.network
+/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Train on 450000 samples, validate on 50000 samples
+Epoch 1/30
+2018-11-29 09:19:47.779479: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+450000/450000 [==============================] - 4210s 9ms/step - loss: 1.7002 - categorical_accuracy: 0.4477 - val_loss: 1.4643 - val_categorical_accuracy: 0.5251
+Epoch 2/30
+450000/450000 [==============================] - 4894s 11ms/step - loss: 1.4208 - categorical_accuracy: 0.5201 - val_loss: 1.3963 - val_categorical_accuracy: 0.5433
+Epoch 3/30
+450000/450000 [==============================] - 4369s 10ms/step - loss: 1.3654 - categorical_accuracy: 0.5349 - val_loss: 1.3663 - val_categorical_accuracy: 0.5526
+Epoch 4/30
+450000/450000 [==============================] - 3913s 9ms/step - loss: 1.3384 - categorical_accuracy: 0.5420 - val_loss: 1.3520 - val_categorical_accuracy: 0.5570
+Epoch 5/30
+450000/450000 [==============================] - 3904s 9ms/step - loss: 1.3217 - categorical_accuracy: 0.5465 - val_loss: 1.3419 - val_categorical_accuracy: 0.5598
+Epoch 6/30
+450000/450000 [==============================] - 4113s 9ms/step - loss: 1.3097 - categorical_accuracy: 0.5496 - val_loss: 1.3363 - val_categorical_accuracy: 0.5619
+Epoch 7/30
+450000/450000 [==============================] - 3757s 8ms/step - loss: 1.3014 - categorical_accuracy: 0.5518 - val_loss: 1.3292 - val_categorical_accuracy: 0.5641
+Epoch 8/30
+450000/450000 [==============================] - 3714s 8ms/step - loss: 1.2949 - categorical_accuracy: 0.5537 - val_loss: 1.3254 - val_categorical_accuracy: 0.5654
+Epoch 9/30
+450000/450000 [==============================] - 3723s 8ms/step - loss: 1.2894 - categorical_accuracy: 0.5551 - val_loss: 1.3222 - val_categorical_accuracy: 0.5656
+Epoch 10/30
+450000/450000 [==============================] - 3693s 8ms/step - loss: 1.2852 - categorical_accuracy: 0.5563 - val_loss: 1.3192 - val_categorical_accuracy: 0.5664
+Epoch 11/30
+450000/450000 [==============================] - 3711s 8ms/step - loss: 1.2821 - categorical_accuracy: 0.5570 - val_loss: 1.3190 - val_categorical_accuracy: 0.5675
+Epoch 12/30
+450000/450000 [==============================] - 3859s 9ms/step - loss: 1.2789 - categorical_accuracy: 0.5579 - val_loss: 1.3188 - val_categorical_accuracy: 0.5672
+Epoch 13/30
+450000/450000 [==============================] - 5940s 13ms/step - loss: 1.2762 - categorical_accuracy: 0.5587 - val_loss: 1.3158 - val_categorical_accuracy: 0.5681
+Epoch 14/30
+450000/450000 [==============================] - 6356s 14ms/step - loss: 1.2740 - categorical_accuracy: 0.5593 - val_loss: 1.3140 - val_categorical_accuracy: 0.5685
+Epoch 15/30
+450000/450000 [==============================] - 6371s 14ms/step - loss: 1.2718 - categorical_accuracy: 0.5599 - val_loss: 1.3116 - val_categorical_accuracy: 0.5697
+Epoch 16/30
+450000/450000 [==============================] - 4422s 10ms/step - loss: 1.2700 - categorical_accuracy: 0.5604 - val_loss: 1.3100 - val_categorical_accuracy: 0.5697
+Epoch 17/30
+450000/450000 [==============================] - 3659s 8ms/step - loss: 1.2685 - categorical_accuracy: 0.5609 - val_loss: 1.3126 - val_categorical_accuracy: 0.5694
+Epoch 18/30
+450000/450000 [==============================] - 3696s 8ms/step - loss: 1.2670 - categorical_accuracy: 0.5613 - val_loss: 1.3094 - val_categorical_accuracy: 0.5702
+Epoch 19/30
+450000/450000 [==============================] - 3689s 8ms/step - loss: 1.2656 - categorical_accuracy: 0.5617 - val_loss: 1.3105 - val_categorical_accuracy: 0.5700
+Epoch 20/30
+450000/450000 [==============================] - 3719s 8ms/step - loss: 1.2645 - categorical_accuracy: 0.5619 - val_loss: 1.3104 - val_categorical_accuracy: 0.5707
+Epoch 21/30
+450000/450000 [==============================] - 4591s 10ms/step - loss: 1.2638 - categorical_accuracy: 0.5622 - val_loss: 1.3080 - val_categorical_accuracy: 0.5704
+Epoch 22/30
+ 14176/450000 [..............................] - ETA: 1:04:22 - loss: 1.2571 - categorical_accuracy: 0.5619^CTraceback (most recent call last):
+  File "train.py", line 128, in <module>
+    validation_split=0.1, callbacks=[checkpoint])
+  File "/anaconda3/lib/python3.6/site-packages/tensorflow/python/keras/engine/training.py", line 1639, in fit
+    validation_steps=validation_steps)
+  File "/anaconda3/lib/python3.6/site-packages/tensorflow/python/keras/engine/training_arrays.py", line 215, in fit_loop
+    outs = f(ins_batch)
+  File "/anaconda3/lib/python3.6/site-packages/tensorflow/python/keras/backend.py", line 2986, in __call__
+    run_metadata=self.run_metadata)
+  File "/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1439, in __call__
+    run_metadata_ptr)
+KeyboardInterrupt
