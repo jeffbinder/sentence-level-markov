@@ -27,10 +27,11 @@ The network architecture I used is similar to one of the simplest types that has
 
 If you want to run the program yourself, you will need to install [Python 3](python.org), [NLTK](nltk.org), [TensorFlow](tensorglow.org), and [NumPy/SciPy](scipy.org). Then put your training data in a bunch of plain text files in a directory and the text you want to scramble in another plain text file. You can then do something like this at the command line:
 
-python prepare_corpus.py <training-data-dir> <corpus-name>.corpus
+```python prepare_corpus.py <training-data-dir> <corpus-name>.corpus
 python train.py <corpus-name>.corpus <corpus-name>.network
 python markovize.py <corpus-name>.corpus <corpus-name>.network <input-text-name>.txt <output>.markov
 python markov_generate.py <input>.markov <output>.txt
+```
 
 The scripts contain various variables that you can edit to alter the behavior of the model.
 
