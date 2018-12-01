@@ -1,6 +1,7 @@
 # A sentence-level Markov text generator
 
 > "I am a Speculation of the Poet"
+
 ---a neural network
 
 This is my entry for the 2018 version of [National Novel Generation Month](https://github.com/NaNoGenMo/2018), which challenges people to write a computer program that creates a 50,000-word novel.
