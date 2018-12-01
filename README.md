@@ -1,11 +1,25 @@
 # A sentence-level Markov text generator
 
-"I am a Speculation of the Poet"
+> "I am a Speculation of the Poet"
 ---a neural network
 
 This is my entry for the 2018 version of [National Novel Generation Month](https://github.com/NaNoGenMo/2018), which challenges people to write a computer program that creates a 50,000-word novel.
 
 Short version: I split each chapter of _Moby-Dick_ into sentences, then had an AI choose the order in which the sentences should appear. I call the result [_Mboy-Dcki_](https://raw.githubusercontent.com/jeffbinder/sentence-level-markov/master/mboydcki.txt).
+
+Take, for instance, the opening of the famous chapter on "The Whiteness of the Whale." Here is Melville's version:
+
+> WHAT the white whale was to Ahab, has been hinted; what, at times, he was to me, as yet remains unsaid.
+> 
+> Aside from those more obvious considerations touching Moby Dick, which could not but occasionally awaken in any man's soul some alarm, there was another thought, or rather vague, nameless horror concerning him, which at times by its intensity completely overpowered all the rest; and yet so mystical and well nigh ineffable was it, that I almost despair of putting it in a comprehensible form. It was the whiteness of the whale that above all things appalled me. But how can I hope to explain myself here; and yet, in some dim, random way, explain myself I must, else all these chapters might be naught.
+
+Here is what me neutral network put together:
+
+> What the white whale was to Ahab, has been hinted; what, at times, he was to me, as yet remains unsaid. 
+> 
+> Bethink thee of the albatross, whence come those clouds of spiritual wonderment and pale dread, in which that white phantom sails in all imaginations?  Wonder ye then at the fiery hunt?  To analyse it, would seem impossible.  The flashing cascade of his mane, the curving comet of his tail, invested him with housings more resplendent than gold and silver-beaters could have furnished him.  He was the elected Xerxes of vast herds of wild horses, whose pastures in those days were only fenced by the Rocky Mountains and the Alleghanies.
+
+---
 
 This project is inspired by a passage in Benjamin Franklin's _Autobiography_ in which he describes how he learned to write as a young man.
 
