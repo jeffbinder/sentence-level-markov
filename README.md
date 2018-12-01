@@ -20,7 +20,7 @@ Here is what me neutral network put together:
 > 
 > Bethink thee of the albatross, whence come those clouds of spiritual wonderment and pale dread, in which that white phantom sails in all imaginations?  Wonder ye then at the fiery hunt?  To analyse it, would seem impossible.  The flashing cascade of his mane, the curving comet of his tail, invested him with housings more resplendent than gold and silver-beaters could have furnished him.  He was the elected Xerxes of vast herds of wild horses, whose pastures in those days were only fenced by the Rocky Mountains and the Alleghanies.
 
----
+## What I did
 
 This project is inspired by a passage in Benjamin Franklin's _Autobiography_ in which he describes how he learned to write as a young man.
 
@@ -33,6 +33,8 @@ I trained the neural net on 500,000 sentences (with 10% held out for evaluation)
 Over all the chapters, the neural network is able to pick the right sentence ("right" meaning the one that appears next in the original text) about 3.5% of the time (328 / 9384 sentences chosen). (The success rate might be a little different for the actual text generator because of the constraint that each sentence only be used once.) This is not too impressive, but it is better than the expected success rate if the sentences were chosen randomly, which is 1.4%. Even when it makes a wrong decision, the model is not choosing sentences in a totally arbitrary way---it consistently ranks some sentences much higher than others.
 
 Do these choices have any logic to them? I've yet to dig into it in detail, but I can offer some provisional observations. The network has learned to follow exclamation points with uncapitalized words, as was common in nineteenth-century novels; it also developed a rudimentary model of how quotation marks and dialogue tags fit together. It likes to follow one question with another. It also seems to have learned to group together sentences that contain similar pronouns (I/me, she/her, etc.). Whether it learned anything involving substantive words I do not know.
+
+## The technical details
 
 This program employs a variant of the [Markov chain method](https://en.wikipedia.org/wiki/Markov_chain), one of the oldest and simplest methods of computational text generation. The most common version of this method works by measuring which words appear most often after particular sequences of words; it then uses this information to predict what word will come next. Thus, if the last 6 words are "What are your plans for the," the model might predict that the next word will be "weekend." Markov chains are typically constructed at the character, word, or token level. However, it is also possible to create a Markov chain model that operates at the sentence level. For each sentence generated, the model must assign probabilities for every sentence that could potentially come next. It is generally not possible to train such a model directly, since each sentence typically only occurs once even in a very large amount of text. However, it is possible to generate a sentence-level Markov model by using a neural net to determine the probabilities. That is, in essence, what this software does.
 
