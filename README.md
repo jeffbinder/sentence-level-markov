@@ -5,7 +5,7 @@
 
 This is my entry for the 2018 version of [National Novel Generation Month](https://github.com/NaNoGenMo/2018), which challenges people to write a computer program that creates a 50,000-word novel.
 
-Short version: I scrambled the sentences in each chapter of _Moby-Dick_, then had an AI choose the order in which the sentences should appear. I call the result [_Mboy-Dcki_](https://raw.githubusercontent.com/jeffbinder/sentence-level-markov/master/mboydcki.txt).
+Short version: I split each chapter of _Moby-Dick_ into sentences, then had an AI choose the order in which the sentences should appear. I call the result [_Mboy-Dcki_](https://raw.githubusercontent.com/jeffbinder/sentence-level-markov/master/mboydcki.txt).
 
 This project is inspired by a passage in Benjamin Franklin's _Autobiography_ in which he describes how he learned to write as a young man.
 
