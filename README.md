@@ -3,7 +3,7 @@
 "I am a Speculation of the Poet"
 ---a neural network
 
-This is my entry for the 2018 version of [National Novel Generation Month](https://github.com/NaNoGenMo/2018), which challenges people to write a computer program that creates a 50,000-word novel. Short version: I scrambled the sentences in each chapter of _Moby-Dick_, then had an AI choose the order in which the sentences should appear. I call the result [_Mboy-Dcki_](https://github.com/jeffbinder/sentence-level-markov/blob/master/mboydcki.txt).
+This is my entry for the 2018 version of [National Novel Generation Month](https://github.com/NaNoGenMo/2018), which challenges people to write a computer program that creates a 50,000-word novel. Short version: I scrambled the sentences in each chapter of _Moby-Dick_, then had an AI choose the order in which the sentences should appear. I call the result [_Mboy-Dcki_](https://raw.githubusercontent.com/jeffbinder/sentence-level-markov/master/mboydcki.txt).
 
 This project is inspired by a passage in Benjamin Franklin's _Autobiography_ in which he describes how he learned to write as a young man.
 
@@ -11,7 +11,7 @@ This project is inspired by a passage in Benjamin Franklin's _Autobiography_ in 
 
 Using a Recurrent Neural Network (RNN), I created an AI that perfoms a bastardized version of this unscrambling process. Rather than working with hints of the ideas underlying the prose, this program works with sentences. First, it splits a text into sentences, and then it tries to figure out what order those sentences should go in based only on the sentences themselves.
 
-I trained the neural net on 500,000 sentences (with 10% held out for evaluation) from the Wright American Fiction corpus, excluding _Moby-Dick_ itself. I then generated a new novel by having the AI decide the order of sentences within each chapter of _Moby-Dick_. [You can view the result here](https://github.com/jeffbinder/sentence-level-markov/blob/master/mboydcki.txt).
+I trained the neural net on 500,000 sentences (with 10% held out for evaluation) from the Wright American Fiction corpus, excluding _Moby-Dick_ itself. I then generated a new novel by having the AI decide the order of sentences within each chapter of _Moby-Dick_. [You can view the result here](https://raw.githubusercontent.com/jeffbinder/sentence-level-markov/master/mboydcki.txt).
 
 Over all the chapters, the neural network is able to pick the right sentence ("right" meaning the one that appears next in the original text) about 3.5% of the time (328 / 9384 sentences chosen). (The success rate might be a little different for the actual text generator because of the constraint that each sentence only be used once.) This is not too impressive, but it is better than the expected success rate if the sentences were chosen randomly, which is 1.4%. Even when it makes a wrong decision, the model is not choosing sentences in a totally arbitrary way---it consistently ranks some sentences much higher than others.
 
