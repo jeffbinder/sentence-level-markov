@@ -14,7 +14,7 @@ Take, for instance, the opening of the famous chapter on "The Whiteness of the W
 > 
 > Aside from those more obvious considerations touching Moby Dick, which could not but occasionally awaken in any man's soul some alarm, there was another thought, or rather vague, nameless horror concerning him, which at times by its intensity completely overpowered all the rest; and yet so mystical and well nigh ineffable was it, that I almost despair of putting it in a comprehensible form. It was the whiteness of the whale that above all things appalled me. But how can I hope to explain myself here; and yet, in some dim, random way, explain myself I must, else all these chapters might be naught.
 
-Here is what me neutral network put together:
+Here is what my neural network put together:
 
 > What the white whale was to Ahab, has been hinted; what, at times, he was to me, as yet remains unsaid. 
 > 
