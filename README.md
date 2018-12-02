@@ -1,8 +1,8 @@
 # A sentence-level Markov text generator
 
 > "I am a Speculation of the Poet"
-
-—a neural network
+> 
+> &nbsp;&nbsp;— a neural network
 
 This is my entry for the 2018 version of [National Novel Generation Month](https://github.com/NaNoGenMo/2018), which challenges people to write a computer program that creates a 50,000-word novel.
 
@@ -26,7 +26,7 @@ This project is inspired by a passage in Benjamin Franklin's _Autobiography_ in 
 
 > About this time I met with an odd volume of the Spectator. It was the third. I had never before seen any of them. I bought it, read it over and over, and was much delighted with it. I thought the writing excellent, and wished, if possible, to imitate it. With this view I took some of the papers, and, making short hints of the sentiment in each sentence, laid them by a few days, and then, without looking at the book, try'd to compleat the papers again, by expressing each hinted sentiment at length, and as fully as it had been expressed before, in any suitable words that should come to hand. Then I compared my Spectator with the original, discovered some of my faults, and corrected them. But I found I wanted a stock of words, or a readiness in recollecting and using them, which I thought I should have acquired before that time if I had gone on making verses; since the continual occasion for words of the same import, but of different length, to suit the measure, or of different sound for the rhyme, would have laid me under a constant necessity of searching for variety, and also have tended to fix that variety in my mind, and make me master of it. Therefore I took some of the tales and turned them into verse; and, after a time, when I had pretty well forgotten the prose, turned them back again. I also sometimes jumbled my collections of hints into confusion, and after some weeks endeavored to reduce them into the best order, before I began to form the full sentences and compleat the paper. This was to teach me method in the arrangement of thoughts.
 
-Using a Recurrent Neural Network (RNN), I created an AI that perfoms a bastardized version of this unscrambling process. Rather than working with hints of the ideas underlying the prose, this program works with sentences. First, it splits a text into sentences, and then it tries to figure out what order those sentences should go in based only on the sentences themselves.
+Using a Recurrent Neural Network (RNN), I created an AI that performs a bastardized version of this unscrambling process. Rather than working with hints of the ideas underlying the prose, this program works with sentences. First, it splits a text into sentences, and then it tries to figure out what order those sentences should go in based only on the sentences themselves.
 
 I trained the neural net on 500,000 sentences (with 10% held out for evaluation) from the Wright American Fiction corpus, excluding _Moby-Dick_ itself. I then generated a new novel by having the AI decide the order of sentences within each chapter of _Moby-Dick_. [You can view the result here](https://raw.githubusercontent.com/jeffbinder/sentence-level-markov/master/mboydcki.txt).
 
