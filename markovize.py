@@ -77,6 +77,7 @@ text = inf.read()
 # paragraph breaks.
 tknzr = nltk.tokenize.punkt.PunktSentenceTokenizer()
 spans = tknzr.span_tokenize(text)
+spans = list(spans)
 sentences = [text[0:spans[0][1]]]
 last_end = spans[0][1]
 for start, end in spans[1:]:
